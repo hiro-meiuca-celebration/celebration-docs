@@ -25,7 +25,6 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
-          exclude: ['**/*.hidden.md']
         },
         blog: {
           showReadingTime: true,
@@ -35,9 +34,9 @@ const config = {
         },
         theme: {
           customCss: [
-          require.resolve('./src/css/custom.css'),
-          require.resolve('./src/css/flex-grid-lite.css')
-        ],
+            require.resolve('./src/css/custom.css'),
+            require.resolve('./src/css/flex-grid-lite.css'),
+          ],
         },
       }),
     ],
@@ -56,23 +55,12 @@ const config = {
           {
             type: 'doc',
             docId: 'intro',
-            position: 'right',
-            label: 'Sobre',
+            position: 'left',
+            label: 'Tutorial',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'design-tokens',
-          //   position: 'right',
-          //   label: 'Design Tokens',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'components',
-          //   position: 'right',
-          //   label: 'Componentes',
-          // },
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/facebook/docusaurus',
+            href: 'https://github.com/hiro-meiuca-celebration/celebration-docs',
             label: 'GitHub',
             position: 'right',
           },
@@ -85,13 +73,9 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Sobre',
+                label: 'Tutorial',
                 to: '/docs/intro',
               },
-              {
-                label: 'Design Tokens',
-                to: '/docs/design-tokens'
-              }
             ],
           },
           {
