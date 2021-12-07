@@ -25,6 +25,7 @@ const config = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+          exclude: ['**/*.hidden.md']
         },
         blog: {
           showReadingTime: true,
@@ -33,7 +34,10 @@ const config = {
             'https://github.com/facebook/docusaurus/edit/main/website/blog/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: [
+          require.resolve('./src/css/custom.css'),
+          require.resolve('./src/css/flex-grid-lite.css')
+        ],
         },
       }),
     ],
@@ -52,10 +56,21 @@ const config = {
           {
             type: 'doc',
             docId: 'intro',
-            position: 'left',
-            label: 'Tutorial',
+            position: 'right',
+            label: 'Sobre',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          // {
+          //   type: 'doc',
+          //   docId: 'design-tokens',
+          //   position: 'right',
+          //   label: 'Design Tokens',
+          // },
+          // {
+          //   type: 'doc',
+          //   docId: 'components',
+          //   position: 'right',
+          //   label: 'Componentes',
+          // },
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
@@ -70,9 +85,13 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
+                label: 'Sobre',
                 to: '/docs/intro',
               },
+              {
+                label: 'Design Tokens',
+                to: '/docs/design-tokens'
+              }
             ],
           },
           {

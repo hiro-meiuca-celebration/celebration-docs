@@ -1,0 +1,7 @@
+.imageSize {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  max-height: 40rem;
+  overflow: hidden;
+}
